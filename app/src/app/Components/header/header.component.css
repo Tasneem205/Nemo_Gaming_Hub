@@ -1,0 +1,16 @@
+.navbar {
+  background-color: rgb(1,1,1); /* Solid black with opacity */
+  background-blend-mode: overlay; /* Blend the image and color */
+}
+
+.transparent-button {
+  background-color: transparent; /* Makes the background transparent */
+  border: none; /* Removes the border */
+  color: white; /* Adjust text color if needed */
+}
+
+/* Optional: Change hover effect */
+.transparent-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly visible on hover */
+}
+

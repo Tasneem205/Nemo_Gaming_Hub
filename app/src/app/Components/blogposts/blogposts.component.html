@@ -1,0 +1,55 @@
+<div>
+  <h3>Blog Posts</h3>
+  <ul class="list-group">
+    <mat-card appearance="outlined" style="background-color: #696E79; color: white; border: 2px solid #696E79;">
+      <mat-card-header>
+        <mat-card-title>{{ posts[0].title }}</mat-card-title>
+        <mat-card-subtitle style="color: white;">{{ posts[0].subtit }}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content style="color: white; font-size: 0.9rem;">
+        <p>{{ posts[0].date }}</p> <!-- Display formatted date -->
+        <p>By: {{ posts[0].author }}</p> <!-- Display author name -->
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-button (click)="viewPost(posts[0].title)">View</button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+
+    <mat-card appearance="outlined" style="background-color: #696E79; color: white; border: 2px solid #696E79;">
+      <mat-card-header>
+        <mat-card-title>{{ posts[1].title }}</mat-card-title>
+        <mat-card-subtitle style="color: white;">{{ posts[1].subtit }}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content style="color: white; font-size: 0.9rem;">
+        <p>{{ posts[1].date }}</p> <!-- Display formatted date -->
+        <p>By: {{ posts[1].author }}</p> <!-- Display author name -->
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-button (click)="viewPost(posts[1].title)">View</button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+
+    <mat-card appearance="outlined" style="background-color: #696E79; color: white; border: 2px solid #696E79;">
+      <mat-card-header>
+        <mat-card-title>{{ posts[1].title }}</mat-card-title>
+        <mat-card-subtitle style="color: white;">{{ posts[1].subtit }}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content style="color: white; font-size: 0.9rem;">
+        <p>{{ posts[1].date }}</p> <!-- Display formatted date -->
+        <p>By: {{ posts[1].author }}</p> <!-- Display author name -->
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-button (click)="viewPost(posts[1].title)">View</button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+  </ul>
+</div>

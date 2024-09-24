@@ -1,0 +1,20 @@
+html, body {
+  height: 100%; /* Ensure the body takes full height */
+  margin: 0; /* Remove default margins */
+}
+
+.d-flex {
+  display: flex; /* Enable Flexbox */
+}
+
+.flex-column {
+  flex-direction: column; /* Stack items vertically */
+}
+
+.min-vh-100 {
+  min-height: 100vh; /* Make the container at least the full height of the viewport */
+}
+
+.flex-fill {
+  flex: 1; /* Allow this element to grow and fill the available space */
+}

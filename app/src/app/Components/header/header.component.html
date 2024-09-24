@@ -1,0 +1,59 @@
+<!-- <nav class="navbar navbar-expand-lg" style="background-color: #09152b;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="/Home">Nemo Gaming Hub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link text-light active" aria-current="page" href="/Home">Home</a>
+        <a class="nav-link text-light" href="/Games">Games</a>
+        <a class="nav-link text-light" href="/Blog">Blog</a>
+        <a class="nav-link text-light" href="/Hack">Hackathon</a>
+        <a class="nav-link text-light" href="/DailyChallange">Daily challange</a>
+        <a class="nav-link text-light" href="/Profile">Profile</a>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg" style="background-color: #09152b;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="/Home">Nemo Gaming Hub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link text-light active" aria-current="page" href="/Home">Home</a>
+        <a class="nav-link text-light" href="/Games">Games</a>
+        <a class="nav-link text-light" href="/Blog">Blog</a>
+        <a class="nav-link text-light" href="/Hack">Hackathon</a>
+        <a class="nav-link text-light" href="/DailyChallange">Daily Challenge</a>
+      </div>
+    </div>
+    <div class="dropdown" style="margin-left: auto;">
+      <button class="btn btn-secondary dropdown-toggle transparent-button" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="assets/icons/profile-user.png" alt="" style="width: 30px; height: 30px;">
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+        <li *ngIf="isLoggedIn">
+          <a class="dropdown-item" href="/Profile">Profile</a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a class="dropdown-item" href="/Settings">Settings</a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a class="dropdown-item" href="/Logout" (click)="logout()">Logout</a>
+        </li>
+        <li *ngIf="!isLoggedIn">
+          <a class="dropdown-item" href="/Login" (click)="login()">Login</a>
+        </li>
+        <li *ngIf="!isLoggedIn">
+          <a class="dropdown-item" href="/Register">Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
