@@ -3,7 +3,7 @@ import { MongoClient, ObjectId } from 'mongodb';
 
 const updateUser = async function (req, res, next) {
     try {
-        const client = new MongoClient('mongodb://localhost:27017');
+        const client = new MongoClient(process.env.URI);
         try {
             // Connect the client to the server
             await client.connect();

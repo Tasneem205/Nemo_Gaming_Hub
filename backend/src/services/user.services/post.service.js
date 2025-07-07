@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 
 const login = async (req, res, next) => {
     try {
-        const client = new MongoClient('mongodb://localhost:27017');
+        const client = new MongoClient(process.env.URI);
         try {
             // Connect the client to the server
             await client.connect();
@@ -28,7 +28,7 @@ const login = async (req, res, next) => {
             const isPasswordValid = await bcrypt.compare(password, user.password);
 
             if (!isPasswordValid) {
-                return responses.unauthorized(res, "Invalid credentials");
+                return responses.unAuthorized(res, "Invalid credentials");
             }
 
             // Generate JWT token
@@ -62,7 +62,7 @@ const login = async (req, res, next) => {
 
 const register = async function (req, res, next) {
     try {
-        const client = new MongoClient('mongodb://localhost:27017');
+        const client = new MongoClient(process.env.URI);
         try {
             // Connect the client to the server
             await client.connect();

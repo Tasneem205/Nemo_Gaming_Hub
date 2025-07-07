@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 
 const getAll = async function (req, res, next) {
     try{
-        const client = new MongoClient('mongodb://localhost:27017');
+        const client = new MongoClient(process.env.URI);
 
         try {
             // Connect the client to the server
@@ -31,7 +31,7 @@ const getAll = async function (req, res, next) {
 
 const getLast = async function (req, res, next) {
     try{
-        const client = new MongoClient('mongodb://localhost:27017');
+        const client = new MongoClient(process.env.URI);
 
         try {
             // Connect the client to the server
